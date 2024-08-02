@@ -1,6 +1,9 @@
-export interface DataTypeRegistry {
-  // empty by design
-}
+// export interface DataTypeRegistry {
+// empty by design
+// foo: string
+// boo: number
+// }
+
 // the "& string" is just a trick to get
 // a nicer tooltip to show you in the next step
 export function fetchRecord(
