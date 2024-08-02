@@ -24,13 +24,19 @@ function printCar(car: {
   make: string
   model: string
   year: number
-}) {
-  console.log(`${car.make} ${car.model} (${car.year})`)
+  isElectric?: boolean
+  towingCapacity?: number
+}): void {
+  console.log(
+    `${car.make} ${car.model} (${car.year}) ${
+      car.isElectric ? 'Electric' : ''
+    }`,
+  )
 }
-/*
-//printCar(new Car()) //✔️ Fine
-//printCar(new Truck()) //✔️ Fine
-//printCar(vehicle) //✔️ Fine
+
+printCar(new Car()) //✔️ Fine
+printCar(new Truck()) //✔️ Fine
+printCar(vehicle) //✔️ Fine
 /**/
 
 export default {}
