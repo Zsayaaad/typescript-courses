@@ -39,54 +39,14 @@ interface Dict<T> {
 }
 
 // Array.prototype.map, but for Dict
-/**The mapDict function will apply a certain function to each value in the object and return
- * a new object with adjusted values */
-function mapDict<T, U>(
-  obj: Dict<T>,
-  callback: (value: T, key: string) => U,
-): Dict<U> {
-  const dictResult: Dict<U> = {}
-  for (const key in obj) {
-    if (obj.hasOwnProperty(key)) {
-      dictResult[key] = callback(obj[key], key)
-    }
-  }
-  return dictResult
-}
+function mapDict(...args: any[]): any {}
 // Array.prototype.filter, but for Dict
-/**The filterDict function will filter the values of the object based on a specific function
- * and return a new object containing only the values passing through the filter */
-function filterDict<T>(
-  obj: Dict<T>,
-  callback: (value: T, key: string) => boolean,
-): Dict<T> {
-  const dictResult: Dict<T> = {}
-  for (const key in obj) {
-    if (obj.hasOwnProperty(key) && callback(obj[key], key)) {
-      dictResult[key] = obj[k]
-    }
-  }
-  return dictResult
-}
+function filterDict(...args: any[]): any {}
 // Array.prototype.reduce, but for Dict
-/**The reduceDict function will aggregate the values of the object based on a particular function
- * and return the result of aggregation */
-function reduceDict<T, U>(
-  obj: Dict<T>,
-  callback: (currentVal: U, value: T, key: string) => U,
-  initialValue: U,
-) {
-  let currentValue = initialValue
-  for (const key in obj) {
-    if (obj.hasOwnProperty(key)) {
-      currentValue = callback(currentValue, obj[key], key)
-    }
-  }
-  return currentValue
-}
+function reduceDict(...args: any[]): any {}
 
 /////////////////////////////////////////
-///////////// TEST SUITE ///////////////
+///////////// TEST SUITE ////////////////
 //////// no need to modify these ////////
 /////////////////////////////////////////
 
